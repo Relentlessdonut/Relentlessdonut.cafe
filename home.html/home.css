@@ -104,7 +104,15 @@ header .logo{
 }
 
 #hamburger-btn{
-    color: #fff
+    color: #fff;
+    cursor: pointer;
+    display: none;
 }
+
+@media( max-width: 768px){
+    header{
+        padding: 10px
+    }
+};
     
 
