@@ -83,5 +83,28 @@ header .logo{
 .hero-section .content button{
     background: #fff;
     padding: 12px 30px;
-    
+    border-radius: 6px;
+    margin-top: 38;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
 }
+
+.hero-section .content button:hover{
+    color:#fff;
+    background:#c06b3e;
+}
+
+#close-menu-btn{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#hamburger-btn{
+    color: #fff
+}
+    
+
