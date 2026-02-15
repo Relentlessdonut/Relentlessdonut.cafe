@@ -125,4 +125,11 @@ header .show-moblie-menu::before{
     backdrop-filter: blur(5px);
 }
 
+.navbar .logo{
+    font-size: 1.7rem;
+}
 
+#hamburger-btn,
+#close-menu-btn {
+    display: block;
+}
