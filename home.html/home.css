@@ -133,3 +133,14 @@ header .show-moblie-menu::before{
 #close-menu-btn {
     display: block;
 }
+
+.navbar .menu-links{
+    position: fixed;
+    top: 0;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background: #fff;
+    flex-direction: 70px 40xp 0;
+    transition: left 0.2s ease;
+}
