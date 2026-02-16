@@ -144,4 +144,9 @@ header .show-moblie-menu::before{
     flex-direction: 70px 40xp 0;
     transition: left 0.2s ease;
 }
-
+header.show-moblie-menu .navbar  .menu-links{
+    left: 0;
+}
+.navbar a{
+    color: #fff;
+}
