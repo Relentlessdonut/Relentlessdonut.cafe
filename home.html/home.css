@@ -13,7 +13,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    height: 20px;
+    padding: 20px;
 }
 
 header .navbar{
@@ -150,3 +150,21 @@ header.show-moblie-menu .navbar  .menu-links{
 .navbar a{
     color: #fff;
 }
+
+.hero-section .content {
+    text-align: center;
+}
+
+.hero-section.content :is(h2, p){
+    max-width: 100%;
+};
+
+.hero-section .content h2{
+    font-size: 2.3rem;
+    line-height: 60px;
+}
+
+.hero-section .content button {
+    padding: 9px 18px;
+}
+
