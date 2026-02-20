@@ -25,7 +25,7 @@ header .navbar{
 }
 
 header .logo{
-    color: #fff;
+    color: #ffffff;
     font-family: 600;
     font-size: 2.1em;
     text-decoration: none;
@@ -38,7 +38,7 @@ header .logo{
 .navbar .menu-links{
     display: flex;
     list-style: none;
-    gap: 35px;
+    gap: 350px;
 }
 
 .navbar a{
