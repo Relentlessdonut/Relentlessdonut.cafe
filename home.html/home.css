@@ -13,7 +13,12 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px;
+    padding: 200px;
+    font-size: 1.4em;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header .navbar{
@@ -26,8 +31,8 @@ header .navbar{
 
 header .logo{
     color: #ffffff;
-    font-family: 600;
-    font-size: 2.1em;
+    font-weight: 600;
+    font-size: 3rem;
     text-decoration: none;
 }
 
@@ -48,7 +53,7 @@ header .logo{
 }
 
 .navbar a:hover{
-    color: #c06b3e;
+    color: #472a1a;
 }
 
 .hero-section{
@@ -92,7 +97,7 @@ header .logo{
 
 .hero-section .content button:hover{
     color:#fff;
-    background:#c06b3e;
+    background: #472a1a;
 }
 
 #close-menu-btn{
@@ -107,11 +112,12 @@ header .logo{
     color: #fff;
     cursor: pointer;
     display: none;
+    width:100px;
 }
 
 @media( max-width: 768px){
     header{
-        padding: 10px
+        padding: 20px
     }
 };
     
@@ -126,12 +132,13 @@ header .show-moblie-menu::before{
 }
 
 .navbar .logo{
-    font-size: 1.7rem;
+    font-size: 2.5rem;
 }
 
 #hamburger-btn,
 #close-menu-btn {
     display: block;
+    position: fixed;
 }
 
 .navbar .menu-links{
