@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const card = e.target.closest('.card');
       const itemName = card.querySelector('h3').textContent;
 
-      // Grab the last <p> in the card for price
-      let itemPrice = card.querySelector('p:last-of-type').textContent.trim();
+     
+      let itemPrice = card.querySelector('p:last-of-type').textContent.trim()
 
       // Remove $ and any spaces to ensure parseFloat works
       const priceNumber = parseFloat(itemPrice.replace(/[^0-9.]/g, '')) || 0;
