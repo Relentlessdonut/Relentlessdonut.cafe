@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.btn-order').forEach(button => {
     button.addEventListener('click', (e) => {
       const card = e.target.closest('.card');
-      const itemName = card.querySelector('h3').textContent;
+      const itemName = card.querySelector('h3, h4').textContent;
 
      
       let itemPrice = card.querySelector('p:last-of-type').textContent.trim()
