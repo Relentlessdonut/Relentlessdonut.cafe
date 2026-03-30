@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+
   const cart = document.querySelector('.cart');
   const cartCount = document.querySelector('.cart-count');
   const cartDropdown = document.querySelector('.cart-dropdown');
@@ -8,31 +9,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
   let cartItems = [];
 
-  // Add to cart
+  // 
   document.querySelectorAll('.btn-order').forEach(button => {
     button.addEventListener('click', (e) => {
+
       const card = e.target.closest('.card');
       const itemName = card.querySelector('h3, h4').textContent;
 
-     
-      let itemPrice = card.querySelector('p:last-of-type').textContent.trim()
-
-      // Remove $ and any spaces to ensure parseFloat works
+      let itemPrice = card.querySelector('p:last-of-type').textContent.trim();
       const priceNumber = parseFloat(itemPrice.replace(/[^0-9.]/g, '')) || 0;
 
       cartItems.push({ name: itemName, price: priceNumber });
 
-      // Update counter
       cartCount.textContent = cartItems.length;
 
-      // Render cart dropdown
       renderCart();
-      //open dropdown
-      cartDropdown.style.display = 'block';
-    
-  });
 
-  // Render cart
+      // 🔥 SHOW DROPDOWN
+      cartDropdown.style.display = 'block';
+
+    });
+  }); 
+
+  // 
   function renderCart() {
     cartItemsList.innerHTML = '';
 
@@ -45,7 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
       cartItems.forEach((item, index) => {
         const li = document.createElement('li');
-        li.innerHTML = `${item.name} <span>$${item.price.toFixed(2)}</span> <button onclick="removeItem(${index})">x</button>`;
+        li.innerHTML = `
+          ${item.name}
+          <span>$${item.price.toFixed(2)}</span>
+          <button onclick="removeItem(${index})">x</button>
+        `;
         cartItemsList.appendChild(li);
 
         total += item.price;
@@ -55,35 +58,30 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  // Remove item
+  // 
   window.removeItem = function(index) {
     cartItems.splice(index, 1);
     cartCount.textContent = cartItems.length;
     renderCart();
-  }
+  };
 
-  // Toggle dropdown
-  cart.addEventListener('click', (e) => {
-    if (!e.target.closest('.cart-dropdown')) {
-      cartDropdown.style.display = cartDropdown.style.display === 'block' ? 'none' : 'block';
+  // 
+  cart.addEventListener('click', () => {
+    if (cartDropdown.style.display === 'block') {
+      cartDropdown.style.display = 'none';
+    } else {
+      cartDropdown.style.display = 'block';
     }
   });
 
-  // Close dropdown if clicked outside
+  // 
   document.addEventListener('click', (e) => {
     if (!cart.contains(e.target)) {
       cartDropdown.style.display = 'none';
     }
   });
-});
 
-document.addEventListener('click', (e) => {
-    if (!cart.contains(e.target)) {
-      cartDropdown.style.display = 'none';
-    }
-  });
-
-  // ✅ Mobile menu toggle
+  // 
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.querySelector('.nav-links');
 
@@ -91,6 +89,7 @@ document.addEventListener('click', (e) => {
     navLinks.classList.toggle('active');
   });
 
+  // 
   ScrollReveal().reveal('.card', {
     distance: '40px',
     duration: 800,
